@@ -1,0 +1,15 @@
+# Stroke
+#### Video Demo: https://youtu.be/MKW3upmCnPo?si=FqsMrVy1T4UysSUD
+#### Description:
+
+This is stroke. A web based speed typing game built with HTML, CSS, and JavaScript. I wanted to become a faster typer, so what better way than making a typing game.  
+
+Start by clicking on the prompt to focus the text and begin by typing the first letter. A timer will automatically appear for 30 seconds. Keep in mind that spacing will skip the entire word if the word isn’t fully typed, so don’t worry about going back as more words will come. The objective is to type as many words as you can correctly for 30 seconds. Once the timer runs out, you will see your words per minute. This is calculated by the amount of correctly typed words in white multiplied by 2. Hit retake for the page to refresh and play again.
+
+Stroke only uses one index.html file in the directory for the entire app. All the parent elements are within the main tag. The "logo" is just an h1 element. The parent header element contains the WPM, timer and retake button (it's actually a div) child elements. I learned a lot from the child elements in this header element. The svg is for the animated lines for the retake div. They were pretty complex to get right but configiruable enough to the extent they were usefule. The game div contains the words, cursor, and focus error child elements. I wasn't able to figure out how to make the words div typable without clicking on the div area like monkeytype does.
+
+I take pride in my CSS. Although, I would want to use a framework like three.js, or React eventually. I wanted to take a modern approach to the popular website monkeytype.com and create something that was more aesthetically pleasing. I used a dark background with a soft Off-White font color to ease the eyes as well as some @keyframes from Animista for my cursor so it appears smooth and sophisticated. 
+
+JavaScript is still relatively a new language for me. This project was cultivation of weeks of soaking in the syntax. It isn't perfect, there's still quite a few bugs I'd like to configure. First the array of all the words stands paramount to the rest of the code. At first I used ChatGPT to generate me an array but I realized I needed some more simpler words, so I put some of my own (CS50 is in there somewhere). All the words are first randomly chosen in a set of 200 elements. 1 of which is always a class of "current word," and 1 of which in the child elements in the current word is the "letter current." The script fundementally continous to check and update the class of each element and subelement from every "keydown" through an event handler. The cursor positions itself by offsetting itself to the left of the next letter. The coloring of the words validates the "letter current" element to check whether the user input of keydown matches it. 
+
+To summarize, this was pretty hard. I had the aid of the monkeytype git src code to help me interalize the concepts and the approach I wanted to take.  Bring me divs, a lot of divs.
